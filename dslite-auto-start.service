@@ -1,0 +1,9 @@
+[Unit]
+Description=run dslite during boot
+After=network.target
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/dslite.sh
+[Install]
+WantedBy=multi-user.target
